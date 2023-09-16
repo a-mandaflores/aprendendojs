@@ -196,7 +196,7 @@ var val = email.split('')
 
 for(const letra of val){
     console.log(letra)
-}
+
 ```
 ---
 ### Objetos

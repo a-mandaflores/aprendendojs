@@ -13,7 +13,7 @@ var segundos = 0
 function cronometro(tempo){
 
   const contagemSegundos = setInterval(()=>{
-    process.stdin.on('keypress',(ch, key)=>{
+    process.stdin.on('keypress',(_, key)=>{
       if(key.name === 'p'){
         clearTimeout(contagemTempo)
         clearInterval(contagemSegundos)
@@ -35,8 +35,7 @@ function cronometro(tempo){
 
 
 console.log('O cronometro tem contagem de 5 segundos.\nPrecione I para iniciar')
-process.stdin.on('keypress', (ch,key)=>{
-  console.log(ch)
+process.stdin.on('keypress', (_,key)=>{
     if(key.name === 'i' || key.name === 'I'){
       cronometro(6000)
       console.clear()
